@@ -1,0 +1,13 @@
+{
+    "name"         : "conv1d_node",
+    "version"      : "1.0.0",
+    "description"  : "A convolutional 1d node",
+    "dependencies": {
+    },
+    "keywords": [ "node-red" ],
+    "node-red"     : {
+        "nodes": {
+            "sample": "conv1dNode/conv1d.js"
+        }
+    }
+}

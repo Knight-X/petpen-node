@@ -1,0 +1,13 @@
+{
+    "name"         : "convlstm_2d_node",
+    "version"      : "1.0.0",
+    "description"  : "A convolutional lstm 2d node",
+    "dependencies": {
+    },
+    "keywords": [ "node-red" ],
+    "node-red"     : {
+        "nodes": {
+            "sample": "conv_lstm_2d_Node/conv_lstm_2d.js"
+        }
+    }
+}
