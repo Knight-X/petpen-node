@@ -1,0 +1,40 @@
+<script type="text/javascript">
+    RED.nodes.registerType('MaxPooling1D',{
+        category: 'Layer',
+        color: '#ffaaaa',
+        defaults: {
+            pool_size: {value:""},
+	        strides: {value: ""},
+	        padding: {value: ""},
+        },
+        inputs:1,
+        outputs:1,
+        icon: "face.png", 
+        label: function() {
+            return this.name||"MaxPooling1D";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="MaxPooling1D">
+    <div class="form-row">
+        <label for="node-maxpooling1d-pool_size"><i class="icon-tag"></i> Pool Size</label>
+        <input type="text" id="node-maxpooling1d-pool_size" placeholder="Pool Size">
+    </div>
+    <div class="form-row">
+        <label for="node-maxpooling1d-strides"><i class="icon-tag"></i> Strides</label>
+        <input type="text" id="node-maxpooling1d-strides" placeholder="Strides">
+    </div>
+    <div class="form-row">
+        <label for="node-maxpooling1d-padding"><i class="icon-tag"></i> Padding</label>
+        <select id="node-maxpooling1d-padding">
+            <option value="same">Same</option>
+            <option value="valid">Valid</option>
+        </select>
+    </div>
+</script>
+ 
+<script type="text/x-red" data-help-name="Hello World">
+    <p>A node that increments every time a new message is received and sends Hello World in return.<br/>
+    </p>
+</script>

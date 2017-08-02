@@ -1,0 +1,53 @@
+<script type="text/javascript">
+    RED.nodes.registerType('Conv_1D_node',{
+        category: 'Layer',
+        color: '#ffaaaa',
+        defaults: {
+            filters: {value:""},
+            kernel_size: {value: ""},
+            strides: {value: ""},
+            activation: {value: ""},
+
+        },
+        inputs:1,
+        outputs:1,
+        icon: "face.png", 
+        label: function() {
+            return this.name||"Conv_1D_node";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="Conv_1D_node">
+    
+    <div class="form-row">
+        <label for="node-convolutional1d-filters"><i class="icon-tag"></i>Filters</label>
+        <input type="text" id="node-convolutional1d-filters" placeholder="Filters">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-convolutional1d-kernel_size"><i class="icon-tag"></i>Kernel Size</label>
+        <input type="text" id="node-convolutional1d-kernel_size" placeholder="Kernel Size">
+    </div>
+
+    <div class="form-row">
+        <label for="node-convolutional1d-strides"><i class="icon-tag"></i> Strides</label>
+        <input type="text" id="node-convolutional1d-strides" placeholder="Strides">
+    </div>
+    
+    <div class="form-row">
+        <label for="node-convolutional1d-activation"><i class="icon-tag"></i> Activation</label>
+        <select id="node-convolutional1d-activation">
+            <option value="softmax">Softmax</option>
+            <option value="sigmoid">Sigmoid</option>
+            <option value="tanh">Tanh</option>
+            <option value="relu">ReLU</option>
+            <option value="softplus">Softplus</option>
+        </select>
+    </div>
+</script>
+ 
+<script type="text/x-red" data-help-name="Hello World">
+    <p>A node that increments every time a new message is received and sends Hello World in return.<br/>
+    </p>
+</script>
